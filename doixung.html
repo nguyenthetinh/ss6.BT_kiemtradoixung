@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Nhap tu" onclick="nhapphantu()"/>
+<h2 id="rs"></h2>
+<script>
+    function hamdoixung(Array,number) {
+        if (Math.floor(Array.length/2)==number) return "true";
+        else if (Array[number] !== Array[Array.length-number-1]) return "false";
+        else return hamDoiXung(Array,number+1);
+    }
+    function nhapphantu() {
+        let nhaptu = prompt("Nhap phan tu mang");
+        let ketqua=hamdoixung(nhaptu,0);
+        if (ketqua) {
+            document.getElementById("rs").innerHTML=ketqua;
+        }
+    }
+</script>
+</body>
+</html>
